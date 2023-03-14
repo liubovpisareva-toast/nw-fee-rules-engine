@@ -1,0 +1,41 @@
+id: 89a07074-2f9c-4801-801e-441ae767a559
+name: "2023 NW Fees"
+effectiveDate: 2023-03-01
+status: active
+fees:
+  - key: "net_visa_apf_sig_credit"
+    name: "Visa Authorization Processing Fee (APF) Variable Credit - U.S."
+    description: "Applies to all Visa credit authorizations or authorization reversals where the merchant and the card issuer or cardholder are located within the U.S. This fee will not apply to Zero Dollar Verification messages."
+    authRate: 0.0195
+    txRate: 0.0
+    pctRate: 0.0
+    rules:
+      - cardType: 'VISA'
+        debit: false
+        prepaid: false
+        international: false
+        refund: false
+  - key: "net_visa_apf_sig_debit"
+    name: "Visa Authorization Processing Fee (APF) Variable Debit - U.S."
+    description: "Applies to all Visa debit and prepaid authorizations or authorization reversals where the merchant and the card issuer or cardholder are located within the U.S. This fee will not apply to Zero Dollar Verification messages."
+    authRate: 0.0155
+    txRate: 0.0
+    pctRate: 0.0
+    rules:
+      - cardType: 'VISA'
+        debit: true
+        international: false
+        refund: false
+      - cardType: 'VISA'
+        prepaid: true
+        international: false
+        refund: false
+  - key: "net_visa_assessment_fee_sig_credit_fee"
+    name: "Visa U.S. Acquirer Service Fee (Assessments) Credit"
+    description: "Applies to all Visa credit sale transactions"
+    authRate: 0.0
+    txRate: 0.0
+    pctRate: 0.0014
+    rules:
+      - cardType: 'VISA'
+        debit: false
